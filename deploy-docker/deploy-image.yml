@@ -1,0 +1,8 @@
+---
+- name: pull docker image of scientific calculator
+  hosts: all
+  tasks:
+    - name: pull devops calculator image
+      docker_image:
+        name: hritik97/scientific-calc
+        source: pull
