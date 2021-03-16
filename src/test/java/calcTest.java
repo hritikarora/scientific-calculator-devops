@@ -1,6 +1,4 @@
 import calc.calculate;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -14,13 +12,21 @@ public class calcTest {
 
 
     @Test
-    public void factTruePositiveTest() {
+    public void factorialTruePositiveTest() {
         assertEquals("Factorial for true positive", 3628800.0, cal.fact(10.0), DELTA);
     }
 
     @Test
-    public void factFalsePositiveTest() {
+    public void factorialFalsePositiveTest() {
         assertNotEquals("Factorial for false positive",20.0, cal.fact(5.0), DELTA);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void factorialException()
+    {
+        cal.fact(-1);
+        System.out.println("Factorial of negative number can't be found !");
+
     }
 
     @Test
@@ -42,15 +48,31 @@ public class calcTest {
     public void sqrtFalsePositiveTest() {
         assertNotEquals("Square root for false positive",5.0, cal.sqrt(80.0), DELTA);
     }
+    @Test(expected = IllegalArgumentException.class)
+    public void sqrtException()
+    {
+        cal.sqrt(-1);
+            System.out.println("Sqrt of negative number cant be calculated !");
+
+    }
 
     @Test
     public void logTruePositiveTest() {
-        assertEquals("Natural logarithm for true positive",3.4011973816621555, cal.log(30.0), DELTA);
+        assertEquals("Natural logarithm for true positive (integer)",3.4011973816621555, cal.log(30.0), DELTA);
+        assertEquals("Natural logarithm for true positive (double)",2.3513752571634776, cal.log(10.5), DELTA);
     }
 
     @Test
     public void logFalsePositiveTest() {
-        assertNotEquals("Natural logarithm for false positive",5.0, cal.log(50.0), DELTA);
+        assertNotEquals("Natural logarithm for false positive (integer)",5.0, cal.log(50.0), DELTA);
+        assertNotEquals("Natural logarithm for false positive (double)",5.0213, cal.log(10.5), DELTA);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void logException()
+    {
+        cal.log(-1);
+
+        System.out.println("Exception caught !");
+    }
 }
