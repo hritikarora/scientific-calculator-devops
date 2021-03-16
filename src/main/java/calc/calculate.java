@@ -19,6 +19,8 @@ public class calculate {
             Scanner sc = new Scanner(System.in);
             int choice = sc.nextInt();
 
+            long res1 = 0;
+            double res2 = 0.0;
             if(choice<1 || choice>4)
             {
                 System.out.println("invalid choice!\n\n");
@@ -28,17 +30,37 @@ public class calculate {
                 case 1:
                     System.out.println("enter a number :");
                     a = sc.nextDouble();
-                    System.out.println("Factorial of "+a+" is = "+fact(a));
+                    try {
+                        res1 = fact(a);
+                        System.out.println("Factorial of "+a+" is = "+res1);
+                    }
+                    catch (ArithmeticException e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 2:
                     System.out.println("enter a number :");
                     a = sc.nextDouble();
-                    System.out.println("Natural logarithm of "+a+" is = "+log(a));
+                    try {
+                        res2 = log(a);
+                        System.out.println("Natural logarithm of "+a+" is = "+res2);
+                    }
+                    catch (ArithmeticException e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 3:
                     System.out.println("enter a number :");
                     a = sc.nextDouble();
-                    System.out.println("Square root of "+a+" is = "+sqrt(a));
+                    try {
+                        res2 = sqrt(a);
+                        System.out.println("Square root of "+a+" is = "+res2);
+                    }
+                    catch (ArithmeticException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 4:
                     System.out.println("enter 2 numbers :");
@@ -61,12 +83,11 @@ public class calculate {
     public static long fact(double a)
     {
         if(a<0)
-        {
-            logger.error("Factorial of number less than 0 cant be found");
-            throw new IllegalArgumentException("Factorial of number less than 0 cant be found");
-        }
-        long result = 1;
+        { logger.error("Factorial of number less than 0 cant be found");
 
+        throw new ArithmeticException("Factorial of number less than 0 cant be found");}
+
+        long result = 1;
         for (int factor = 2; factor <= a; factor++) {
             result *= factor;
         }
@@ -74,21 +95,18 @@ public class calculate {
         logger.info("!"+a+" = "+result);
 
         return result;
-
     }
     public static double pow(double a, double b)
     {
         logger.info(a+" raised to power "+b);
         logger.info(a+"^"+b+" = "+Math.pow(a,b));
        return Math.pow(a,b);
-
     }
     public static double log(double a)
     {
-        if(a<0)
-        {
-            logger.error("Log of number less than 0 cant be found");
-            throw new IllegalArgumentException("Log of number less than 0 cant be found");
+        if(a<=0)
+        { logger.error("Log of number less than equal to 0 cant be found");
+            throw new ArithmeticException("Log of number less than 0 cant be found");
         }
         logger.info("Natural logarithm of"+a);
         logger.info("log("+a+") = "+Math.log(a));
@@ -97,9 +115,9 @@ public class calculate {
     public static double sqrt(double a)
     {
         if(a<0)
-        {
-            logger.error("Square root of number less than 0 cant be found");
-            throw new IllegalArgumentException("Square root of number less than 0 cant be found");
+        { logger.error("Square root of number less than 0 cant be found");
+
+            throw new ArithmeticException("Square root of number less than 0 cant be found");
         }
         logger.info("Square root of "+a+" = "+Math.sqrt(a));
         return Math.sqrt(a);

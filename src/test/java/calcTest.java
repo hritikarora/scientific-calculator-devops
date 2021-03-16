@@ -7,9 +7,7 @@ import static org.junit.Assert.assertNotEquals;
 public class calcTest {
 
     calculate cal = new calculate();
-
     private static final double DELTA = 1e-15;
-
 
     @Test
     public void factorialTruePositiveTest() {
@@ -21,12 +19,10 @@ public class calcTest {
         assertNotEquals("Factorial for false positive",20.0, cal.fact(5.0), DELTA);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void factorialException()
+    @Test(expected = ArithmeticException.class)
+    public void factExcept()
     {
         cal.fact(-1);
-        System.out.println("Factorial of negative number can't be found !");
-
     }
 
     @Test
@@ -48,12 +44,11 @@ public class calcTest {
     public void sqrtFalsePositiveTest() {
         assertNotEquals("Square root for false positive",5.0, cal.sqrt(80.0), DELTA);
     }
-    @Test(expected = IllegalArgumentException.class)
-    public void sqrtException()
+
+    @Test(expected = ArithmeticException.class)
+    public void sqrtExcept()
     {
         cal.sqrt(-1);
-            System.out.println("Sqrt of negative number cant be calculated !");
-
     }
 
     @Test
@@ -67,12 +62,10 @@ public class calcTest {
         assertNotEquals("Natural logarithm for false positive (integer)",5.0, cal.log(50.0), DELTA);
         assertNotEquals("Natural logarithm for false positive (double)",5.0213, cal.log(10.5), DELTA);
     }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void logException()
+    @Test(expected = ArithmeticException.class)
+    public void logExcept()
     {
         cal.log(-1);
-
-        System.out.println("Exception caught !");
     }
+
 }
