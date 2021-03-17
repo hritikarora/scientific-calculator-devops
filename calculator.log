@@ -1,0 +1,42 @@
+2021-03-17 04:41:49.498 [main] INFO  calc.calculate - Square root of 80.0 = 8.94427190999916
+2021-03-17 04:41:49.501 [main] INFO  calc.calculate - Factorial of 10.0
+2021-03-17 04:41:49.502 [main] INFO  calc.calculate - !10.0 = 3628800
+2021-03-17 04:41:49.503 [main] INFO  calc.calculate - Factorial of 5.0
+2021-03-17 04:41:49.503 [main] INFO  calc.calculate - !5.0 = 120
+2021-03-17 04:41:49.504 [main] ERROR calc.calculate - Square root of number less than 0 cant be found
+2021-03-17 04:41:49.505 [main] INFO  calc.calculate - Natural logarithm of30.0
+2021-03-17 04:41:49.505 [main] INFO  calc.calculate - log(30.0) = 3.4011973816621555
+2021-03-17 04:41:49.505 [main] INFO  calc.calculate - Natural logarithm of10.5
+2021-03-17 04:41:49.506 [main] INFO  calc.calculate - log(10.5) = 2.3513752571634776
+2021-03-17 04:41:49.506 [main] INFO  calc.calculate - 10.0 raised to power 2.0
+2021-03-17 04:41:49.507 [main] INFO  calc.calculate - 10.0^2.0 = 100.0
+2021-03-17 04:41:49.507 [main] INFO  calc.calculate - Natural logarithm of50.0
+2021-03-17 04:41:49.507 [main] INFO  calc.calculate - log(50.0) = 3.912023005428146
+2021-03-17 04:41:49.508 [main] INFO  calc.calculate - Natural logarithm of10.5
+2021-03-17 04:41:49.508 [main] INFO  calc.calculate - log(10.5) = 2.3513752571634776
+2021-03-17 04:41:49.509 [main] ERROR calc.calculate - Factorial of number less than 0 cant be found
+2021-03-17 04:41:49.509 [main] INFO  calc.calculate - 10.0 raised to power 2.0
+2021-03-17 04:41:49.510 [main] INFO  calc.calculate - 10.0^2.0 = 100.0
+2021-03-17 04:41:49.510 [main] ERROR calc.calculate - Log of number less than equal to 0 cant be found
+2021-03-17 04:41:49.511 [main] INFO  calc.calculate - Square root of 25.0 = 5.0
+2021-03-17 19:26:53.212 [main] INFO  calc.calculate - Square root of 80.0 = 8.94427190999916
+2021-03-17 19:26:53.218 [main] INFO  calc.calculate - Factorial of 10.0
+2021-03-17 19:26:53.218 [main] INFO  calc.calculate - !10.0 = 3628800
+2021-03-17 19:26:53.219 [main] INFO  calc.calculate - Factorial of 5.0
+2021-03-17 19:26:53.219 [main] INFO  calc.calculate - !5.0 = 120
+2021-03-17 19:26:53.220 [main] ERROR calc.calculate - Square root of number less than 0 cant be found
+2021-03-17 19:26:53.220 [main] INFO  calc.calculate - Natural logarithm of30.0
+2021-03-17 19:26:53.221 [main] INFO  calc.calculate - log(30.0) = 3.4011973816621555
+2021-03-17 19:26:53.221 [main] INFO  calc.calculate - Natural logarithm of10.5
+2021-03-17 19:26:53.221 [main] INFO  calc.calculate - log(10.5) = 2.3513752571634776
+2021-03-17 19:26:53.222 [main] INFO  calc.calculate - 10.0 raised to power 2.0
+2021-03-17 19:26:53.222 [main] INFO  calc.calculate - 10.0^2.0 = 100.0
+2021-03-17 19:26:53.223 [main] INFO  calc.calculate - Natural logarithm of50.0
+2021-03-17 19:26:53.224 [main] INFO  calc.calculate - log(50.0) = 3.912023005428146
+2021-03-17 19:26:53.224 [main] INFO  calc.calculate - Natural logarithm of10.5
+2021-03-17 19:26:53.225 [main] INFO  calc.calculate - log(10.5) = 2.3513752571634776
+2021-03-17 19:26:53.226 [main] ERROR calc.calculate - Factorial of number less than 0 cant be found
+2021-03-17 19:26:53.226 [main] INFO  calc.calculate - 10.0 raised to power 2.0
+2021-03-17 19:26:53.227 [main] INFO  calc.calculate - 10.0^2.0 = 100.0
+2021-03-17 19:26:53.228 [main] ERROR calc.calculate - Log of number less than equal to 0 cant be found
+2021-03-17 19:26:53.229 [main] INFO  calc.calculate - Square root of 25.0 = 5.0
